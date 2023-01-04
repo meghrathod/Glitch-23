@@ -18,8 +18,9 @@ export default function Home() {
               <span>CREATIVITY</span> &
             </h1>
             <h1>
-              <span>INNOVATION</span> MEETS
+              <span>INNOVATION</span>
             </h1>
+            <h1>MEET</h1>
           </div>
           <div className="HomeContainer__hero--footer">
             <a

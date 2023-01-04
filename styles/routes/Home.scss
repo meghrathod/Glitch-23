@@ -9,11 +9,38 @@
     position: relative;
     @include make-flex($align: flex-start);
 
+    @include respondAt(1470px) {
+      width: 95%;
+    }
+
     &--heroImage {
       position: absolute;
       top: -172px;
       right: -200px;
       width: 830px;
+      transition: all 0.5s ease-in-out;
+
+      @include respondAt(1370px) {
+        width: 750px;
+        top: -150px;
+        right: -150px;
+      }
+
+      @include respondAt(1300px) {
+        width: 700px;
+        top: -150px;
+        right: -150px;
+      }
+
+      @include respondAt(1030px) {
+        width: 600px;
+        top: -150px;
+        right: -150px;
+      }
+
+      @include respondAt(888px) {
+        display: none;
+      }
     }
 
     h1 {
@@ -22,6 +49,19 @@
       font-weight: 300;
       line-height: 100%;
       font-family: "AllianceNo1";
+      transition: all 0.5s ease-in-out;
+
+      @include respondAt(1470px) {
+        font-size: 73px;
+      }
+
+      @include respondAt(780px) {
+        font-size: 60px;
+      }
+
+      @include respondAt(640px) {
+        font-size: 55px;
+      }
 
       span {
         position: relative;
@@ -55,22 +95,35 @@
       font-weight: 900;
       font-size: 27px;
       height: 60px;
+      margin-top: 7px;
       min-width: 300px;
       @include make-flex();
+      @include respondAt(780px) {
+        height: 50px;
+      }
+      @include respondAt(642px) {
+        display: none;
+      }
     }
 
     &--header {
-      @include box();
+      @include box($height: auto);
       @include make-flex($dir: row, $just: flex-start);
       flex-wrap: wrap;
       column-gap: 30px;
       row-gap: 20px;
+      @include respondAt(640px) {
+        gap: 20px;
+      }
     }
 
     &--footer {
-      @include box();
+      @include box($height: auto);
       @include make-flex($dir: row, $just: space-between, $align: flex-start);
       gap: 20px;
+      @include respondAt(640px) {
+        align-items: center;
+      }
       a {
         width: 280px;
         flex: none;
@@ -90,12 +143,22 @@
           font-size: 16px;
           line-height: inherit;
         }
+
+        @include respondAt(780px) {
+          height: 50px;
+        }
       }
 
       p {
         font-size: 17px;
         font-weight: 200;
         font-family: "AllianceNo1";
+        @include respondAt(640px) {
+          text-align: center;
+        }
+      }
+      @include respondAt(780px) {
+        flex-direction: column;
       }
     }
 
@@ -104,6 +167,28 @@
       @include make-flex($dir: column, $just: flex-start);
       gap: 15px;
       margin-top: 120px;
+
+      @include respondAt(1470px) {
+        width: 60%;
+      }
+
+      @include respondAt(1300px) {
+        z-index: 1;
+        width: 75%;
+      }
+
+      @include respondAt(1030px) {
+        width: 100%;
+      }
+
+      @include respondAt(888px) {
+        margin-top: 0px;
+        height: 100%;
+        @include make-flex();
+      }
+      @include respondAt(640px) {
+        gap: 40px;
+      }
     }
   }
 

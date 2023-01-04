@@ -7,13 +7,26 @@
   position: fixed;
   padding: 0 20px;
 
+  @include respondAt(1195px) {
+    padding: 0 25px 0 20px;
+  }
+
+  @include respondAt(1030px) {
+    top: 0px;
+    left: 0;
+    width: 100%;
+    transform: translateX(0);
+    border-radius: 0;
+    border-left: 0;
+    border-right: 0;
+  }
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
 
   background: rgba(255, 255, 255, 0.01);
-  border: 0.5px solid rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(18px);
+  border: 0.5px solid #0afffd;
   border-radius: 30px;
 
   #NavBarInput,
@@ -41,6 +54,7 @@
     }
     @include respondAt(915px) {
       display: block;
+      height: auto;
     }
   }
 
@@ -57,11 +71,11 @@
       position: fixed;
       max-width: 290px;
       flex-direction: column;
-      padding: 123px 14px 0 24px;
-      background-color: #ffffff;
+      padding: 70px 14px 0 24px;
+      background-color: #121212;
       justify-content: flex-start;
       transform: translateX(100%);
-      border-left: 4px solid #93b8e9;
+      border-left: 4px solid #00a2ff;
       transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
       &--open {
         transform: translateX(0%);
@@ -89,6 +103,21 @@
 
       a {
         font-family: "AllianceNo1";
+        @include respondAt(915px) {
+          display: block;
+          @include box(100%, 40px);
+          @include make-flex($align: flex-start);
+          padding-left: 10px;
+          border-radius: 6px;
+          border: 1px solid transparent;
+
+          &:active,
+          &:focus,
+          &:hover {
+            border: 1px solid #00a2ff;
+            outline: none;
+          }
+        }
       }
 
       &:hover {
@@ -97,6 +126,10 @@
 
       @include respondAt(915px) {
         width: 100%;
+
+        &:hover {
+          transform: none;
+        }
       }
     }
 
@@ -119,23 +152,34 @@
     &--right {
       margin-left: 30px;
       @include make-flex($just: flex-end, $dir: row);
+
+      @include respondAt(1195px) {
+        display: none;
+      }
     }
-    &--left {
-      flex-grow: 1;
-      @include make-flex($just: flex-start, $dir: row);
-    }
+
     &--left,
     &--center {
       gap: 20px;
       font-size: 17px;
       @include box(auto);
       @include make-flex($just: space-between, $dir: row);
+    }
 
+    &--left {
+      flex-grow: 1;
+      @include make-flex($just: flex-start, $dir: row);
+      @include respondAt(915px) {
+        display: none;
+      }
+    }
+
+    &--center {
       @include respondAt(915px) {
         width: 100%;
         flex-direction: column;
         height: unset;
-        gap: 20px;
+        gap: 15px;
         justify-content: space-evenly;
       }
     }
@@ -174,7 +218,7 @@
           display: block;
           transform-origin: 4px 0px;
           transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-          border-top: 3px solid rgb(0, 0, 0);
+          border-top: 2px solid rgb(255, 255, 255);
           border-radius: 10px;
           &:first-child {
             transform-origin: 0% 0%;
