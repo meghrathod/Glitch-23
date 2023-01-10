@@ -403,6 +403,10 @@
       position: absolute;
       // z-index: -1;
       mix-blend-mode: screen;
+
+      @include respondAt(1010px) {
+        display: none;
+      }
     }
 
     h1 {
@@ -416,6 +420,13 @@
       align-items: flex-end;
       gap: 10px;
       margin-bottom: 20px;
+      flex-wrap: wrap;
+
+      @include respondAt(400px) {
+        font-size: 8vw;
+        width: 100%;
+        margin: 0;
+      }
       span {
         font-family: inherit;
         font-size: inherit;
@@ -425,14 +436,32 @@
     }
 
     &--right {
-      @include box(55%, auto);
+      @include box(60%, auto);
       @include make-flex($dir: column, $align: flex-end);
       gap: 25px;
       margin-right: 87px;
+
+      @include respondAt(1300px) {
+        margin-right: 50px;
+      }
+      @include respondAt(1255px) {
+        width: 65%;
+      }
+      @include respondAt(1200px) {
+        width: 75%;
+      }
+      @include respondAt(1010px) {
+        width: 80%;
+      }
+      @include respondAt(945px) {
+        width: 100%;
+        margin: 0;
+        padding: 0 15px;
+      }
     }
 
     &--cards {
-      @include box($height: auto);
+      @include box(100%, auto);
       @include make-flex($dir: row, $just: flex-end);
       gap: 20px;
       flex-wrap: wrap;
@@ -440,10 +469,16 @@
       &:hover > .HomeContainer__track--card::after {
         opacity: 1;
       }
+
+      @include respondAt(815px) {
+        flex-wrap: nowrap;
+        flex-direction: column;
+      }
     }
 
     &--card {
-      @include box(300px, 260px);
+      @include box(300px, auto);
+      min-height: 260px;
       border-radius: 10px;
       flex: none;
       flex-grow: 1;
@@ -487,6 +522,15 @@
         );
         z-index: 1;
       }
+
+      @include respondAt(815px) {
+        flex-grow: 1;
+        width: 100%;
+      }
+
+      @include respondAt(400px) {
+        min-height: 300px;
+      }
     }
 
     &--cardContent {
@@ -494,11 +538,15 @@
       border-radius: inherit;
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
       inset: 1px;
       padding: 25px;
       position: absolute;
       z-index: 2;
+      @include box(calc(100% - 2px), calc(100% - 2px));
+
+      @include respondAt(400px) {
+        justify-content: space-evenly;
+      }
 
       p {
         font-family: "AllianceNo1";
