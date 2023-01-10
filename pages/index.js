@@ -33,14 +33,16 @@ export default function Home() {
             <h1>MEET</h1>
           </div>
           <div className="HomeContainer__hero--footer">
-            <a
+            <Link
               className="HomeContainer--blueButton"
               href="https://www.hackerearth.com/challenges/hackathon/glitch-hackathon/"
               target="_blank"
               referrerPolicy="no-referrer"
+              rel="noopener noreferrer"
+
             >
               REGISTER FOR THE <span>HACK</span>
-            </a>
+            </Link>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
               massa mi. Aliquam in hendrerit urna. Ut et massa mi. Aliquam in
@@ -69,15 +71,17 @@ export default function Home() {
           </p>
 
           <div className="HomeContainer__about--buttons">
-            <a
+            <Link
               className="HomeContainer--blueButton"
               href="https://www.hackerearth.com/challenges/hackathon/glitch-hackathon/"
               target="_blank"
               referrerPolicy="no-referrer"
+              rel="noopener noreferrer"
             >
               REGISTER FOR THE <span>HACK</span>
-            </a>
-            <a
+            </Link>
+            <Link
+              href="/faq"
               className="HomeContainer--gradientButton"
               data-content="Learn More"
             />

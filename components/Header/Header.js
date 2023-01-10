@@ -38,28 +38,28 @@ function Header() {
         </ul>
         <ul className="HeaderWrapper__MenuList--center">
           <li className="HeaderWrapper__MenuList--item">
-            <a href="#">Home</a>
+            <Link href="#">Home</Link>
           </li>
           <li className="HeaderWrapper__MenuList--item">
-            <a href="/#about">About</a>
+            <Link href="/#about">About</Link>
           </li>
           <li className="HeaderWrapper__MenuList--item">
-            <a href="/#tracks">Tracks</a>
+            <Link href="/#tracks">Tracks</Link>
           </li>
           <li className="HeaderWrapper__MenuList--item">
-            <a href="/#sponsors">Sponsors</a>
+            <Link href="/#sponsors">Sponsors</Link>
           </li>
           <li className="HeaderWrapper__MenuList--item">
-            <a href="/#prizes">Prizes</a>
+            <Link href="/#prizes">Prizes</Link>
           </li>
           <li className="HeaderWrapper__MenuList--item">
-            <a href="/#events">Events</a>
+            <Link href="/#events">Events</Link>
           </li>
           <li className="HeaderWrapper__MenuList--item">
-            <a href="/#team">Team</a>
+            <Link href="/#team">Team</Link>
           </li>
           <li className="HeaderWrapper__MenuList--item">
-            <a href="/#faq">FAQs</a>
+            <Link href="/#faq">FAQs</Link>
           </li>
         </ul>
         <ul className="HeaderWrapper__MenuList--right">
