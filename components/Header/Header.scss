@@ -19,6 +19,7 @@
     border-radius: 0;
     border-left: 0;
     border-right: 0;
+    border-bottom: 1px solid #0afffd;
   }
   top: 50px;
   left: 50%;
@@ -26,7 +27,7 @@
 
   background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(18px);
-  border: 0.5px solid #0afffd;
+  border: 1px solid #4a4a4a;
   border-radius: 30px;
 
   #NavBarInput,

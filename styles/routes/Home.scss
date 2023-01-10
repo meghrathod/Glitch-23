@@ -1,6 +1,7 @@
 .HomeContainer {
   @include box();
   @include make-flex();
+  overflow: hidden;
 
   &__hero {
     @include box($height: auto);
@@ -10,7 +11,8 @@
     @include make-flex($align: flex-start);
 
     @include respondAt(1470px) {
-      width: 95%;
+      width: 100%;
+      padding: 0 15px;
     }
 
     &--heroImage {
@@ -124,30 +126,6 @@
       @include respondAt(640px) {
         align-items: center;
       }
-      a {
-        width: 280px;
-        flex: none;
-        height: 60px;
-        @include make-flex($dir: row);
-        cursor: pointer;
-        padding: 20px;
-        gap: 5px;
-        background: #8800ff;
-        font-size: 18px;
-        line-height: 100%;
-        border-radius: 15px;
-
-        span {
-          font-family: "DrGlitch";
-          padding-top: 2px;
-          font-size: 16px;
-          line-height: inherit;
-        }
-
-        @include respondAt(780px) {
-          height: 50px;
-        }
-      }
 
       p {
         font-size: 17px;
@@ -192,11 +170,339 @@
     }
   }
 
+  &--blueButton {
+    width: 280px;
+    flex: none;
+    height: 60px;
+    @include make-flex($dir: row);
+    font-family: "AllianceNo1";
+    cursor: pointer;
+    padding: 20px;
+    gap: 5px;
+    background: #8800ff;
+    font-size: 18px;
+    line-height: 100%;
+    border-radius: 9px;
+
+    span {
+      font-family: "DrGlitch";
+      padding-top: 2px;
+      font-size: 16px;
+      line-height: inherit;
+    }
+
+    @include respondAt(780px) {
+      height: 50px;
+    }
+  }
+
+  &--gradientButton {
+    font-family: "AllianceNo1";
+    width: 220px;
+    flex: none;
+    height: 60px;
+    @include make-flex($dir: row);
+    cursor: pointer;
+    gap: 5px;
+    background-color: #121212;
+    position: relative;
+    border-radius: 9px;
+
+    &::before {
+      content: "";
+      border-radius: inherit;
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include box();
+      background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
+    }
+
+    &::after {
+      content: attr(data-content);
+      @include make-flex();
+      border-radius: inherit;
+      position: absolute;
+      z-index: 1;
+      font-size: 20px;
+      padding-bottom: 3px;
+      border: 1px solid transparent;
+      background-color: #121212;
+      @include box(calc(100% - 4px), calc(100% - 7px));
+      transition: all 0.2s ease-in-out;
+    }
+    &:hover {
+      &::after {
+        color: #000;
+        background-color: transparent;
+      }
+    }
+
+    @include respondAt(780px) {
+      height: 50px;
+    }
+  }
+
   &__sponsorBar {
     background-color: #191919;
     border-top: 0.5px solid rgba(255, 255, 255, 0.2);
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(14px);
     @include box($height: 175px);
+  }
+
+  &__about {
+    @include box($height: auto);
+    @include make-flex($dir: row);
+    max-width: 1400px;
+    min-height: 680px;
+
+    @include respondAt(1030px) {
+      flex-direction: column;
+      min-height: 100%;
+      gap: 50px;
+      margin: 60px 0;
+    }
+
+    &--left {
+      @include box(44%, auto);
+      @include make-flex($dir: column, $align: flex-start);
+      gap: 25px;
+
+      h1 {
+        font-family: "AllianceNo1";
+        font-size: 34px;
+        background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        margin-bottom: 20px;
+        span {
+          font-family: "DrGlitch";
+          font-size: 28px;
+          line-height: 100%;
+          margin-bottom: 2px;
+        }
+
+        @include respondAt(540px) {
+          flex-wrap: wrap;
+          margin-bottom: 0;
+        }
+      }
+
+      p {
+        font-family: "AllianceNo1";
+        font-size: 19px;
+        font-weight: 200;
+        line-height: 150%;
+        color: #fff;
+
+        @include respondAt(565px) {
+          font-size: 17px;
+        }
+      }
+
+      @include respondAt(1030px) {
+        width: 100%;
+        padding: 0 15px;
+      }
+    }
+
+    &--right {
+      @include box(44%, auto);
+      @include make-flex($align: flex-end);
+
+      @include respondAt(1030px) {
+        align-items: center;
+        width: 100%;
+      }
+      @include respondAt(544px) {
+        padding: 0 15px;
+      }
+    }
+
+    &--buttons {
+      @include box($height: auto);
+      @include make-flex($dir: row, $just: flex-start);
+      gap: 20px;
+      flex-wrap: wrap;
+      a {
+        flex-grow: 1;
+
+        @include respondAt(1030px) {
+          flex-grow: unset;
+        }
+        @include respondAt(680px) {
+          flex-grow: 1;
+        }
+      }
+    }
+
+    &--qBox {
+      @include box(71%, auto);
+      @include make-flex($dir: column, $align: flex-start);
+      gap: 15px;
+
+      @include respondAt(1165px) {
+        width: 80%;
+      }
+
+      @include respondAt(1030px) {
+        width: 510px;
+      }
+      @include respondAt(544px) {
+        width: 100%;
+      }
+    }
+    &--one {
+      @include box($height: auto);
+      display: flex;
+      flex-direction: row;
+      gap: 3px;
+      img {
+        height: 36px;
+      }
+    }
+    hr {
+      width: 35%;
+      border: 2.5px solid #fff;
+      border-radius: 10px;
+      margin: 20px 0px;
+    }
+
+    &--two {
+      font-family: "AllianceNo1";
+      font-size: 29px;
+      font-weight: 900;
+    }
+
+    &--three {
+      font-family: "Maissiel";
+      font-size: 25px;
+      font-weight: 200;
+      color: #fff;
+      font-style: italic;
+    }
+  }
+
+  &__track {
+    @include box($height: auto);
+    @include make-flex($dir: row, $just: flex-end);
+    max-width: 1400px;
+    min-height: 680px;
+    position: relative;
+
+    &--bgImage {
+      left: -200px;
+      width: 610px;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      // z-index: -1;
+      mix-blend-mode: screen;
+    }
+
+    h1 {
+      font-family: "AllianceNo1";
+      font-size: 34px;
+      background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: flex;
+      align-items: flex-end;
+      gap: 10px;
+      margin-bottom: 20px;
+      span {
+        font-family: inherit;
+        font-size: inherit;
+        line-height: 100%;
+        margin-bottom: 2px;
+      }
+    }
+
+    &--right {
+      @include box(55%, auto);
+      @include make-flex($dir: column, $align: flex-end);
+      gap: 25px;
+      margin-right: 87px;
+    }
+
+    &--cards {
+      @include box($height: auto);
+      @include make-flex($dir: row, $just: flex-end);
+      gap: 20px;
+      flex-wrap: wrap;
+
+      &:hover > .HomeContainer__track--card::after {
+        opacity: 1;
+      }
+    }
+
+    &--card {
+      @include box(300px, 260px);
+      border-radius: 10px;
+      flex: none;
+      flex-grow: 1;
+      background-color: rgba(255, 255, 255, 0.15);
+      // border: 1px solid #b9b3b3a9;
+      position: relative;
+
+      &:hover {
+        &::before {
+          opacity: 1;
+        }
+      }
+
+      &::before,
+      &::after {
+        border-radius: inherit;
+        content: "";
+        height: 100%;
+        left: 0px;
+        opacity: 0;
+        position: absolute;
+        top: 0px;
+        transition: opacity 500ms;
+        width: 100%;
+      }
+
+      &::before {
+        background: radial-gradient(
+          800px circle at var(--mouse-x) var(--mouse-y),
+          rgba(255, 255, 255, 0.06),
+          transparent 40%
+        );
+        z-index: 3;
+      }
+
+      &::after {
+        background: radial-gradient(
+          600px circle at var(--mouse-x) var(--mouse-y),
+          rgba(255, 255, 255, 0.4),
+          transparent 40%
+        );
+        z-index: 1;
+      }
+    }
+
+    &--cardContent {
+      background-color: #121212;
+      border-radius: inherit;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      inset: 1px;
+      padding: 25px;
+      position: absolute;
+      z-index: 2;
+
+      p {
+        font-family: "AllianceNo1";
+      }
+    }
   }
 }
