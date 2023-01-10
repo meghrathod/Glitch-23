@@ -16,7 +16,7 @@ function FaqDropdown({ question, answer, isExpanded, onClick }) {
       setScrollHeight(
         dropDownRef.current.scrollHeight > dropDownRef.current.scrollHeight + 20
           ? dropDownRef.current.scrollHeight
-          : 130
+          : dropDownRef.current.scrollHeight + 20
       );
     }
   });
