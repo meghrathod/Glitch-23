@@ -167,6 +167,15 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="HomeContainer__horizontalScroller">
+        <span>
+          Great Prizes - Great Prizes - Great Prizes - Great Prizes - Great
+          Prizes - Great Prizes - Great Prizes - Great Prizes - Great Prizes -
+          Great Prizes - Great Prizes - Great Prizes - Great Prizes - Great
+          Prizes - Great Prizes - Great Prizes - Great Prizes - Great Prizes -
+          Great Prizes - Great Prizes
+        </span>
+      </section>
     </main>
   );
 }
