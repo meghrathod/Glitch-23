@@ -176,6 +176,38 @@ export default function Home() {
           Great Prizes - Great Prizes
         </span>
       </section>
+      <section className="HomeContainer__prizes">
+        <div className="HomeContainer__prizesBox">
+          <div className="HomeContainer__prizesBox--top"></div>
+          <div className="HomeContainer__prizesBox--bottom">
+            <h2>1st Place</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+              massa mi. Aliquam in hendrerit urna.
+            </p>
+          </div>
+        </div>
+        <div className="HomeContainer__prizesBox">
+          <div className="HomeContainer__prizesBox--top"></div>
+          <div className="HomeContainer__prizesBox--bottom">
+            <h2>2nd Place</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+              massa mi. Aliquam in hendrerit urna.
+            </p>
+          </div>
+        </div>
+        <div className="HomeContainer__prizesBox">
+          <div className="HomeContainer__prizesBox--top"></div>
+          <div className="HomeContainer__prizesBox--bottom">
+            <h2>3rd Place</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+              massa mi. Aliquam in hendrerit urna.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }

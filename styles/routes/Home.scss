@@ -575,6 +575,53 @@
       }
     }
   }
+
+  &__prizes {
+    @include make-flex($dir: row, $just: space-evenly);
+    @include box();
+    max-width: 1400px;
+    gap: 15px;
+
+    @include respondAt(1400px) {
+      padding: 0 15px;
+      max-width: unset;
+    }
+
+    @include respondAt(1180px) {
+      flex-wrap: wrap;
+      row-gap: 45px;
+    }
+  }
+  &__prizesBox {
+    @include box(375px, auto);
+    @include make-flex();
+    gap: 20px;
+    &--top {
+      @include box(100%, 250px);
+      border: 1px solid rgb(158, 158, 158);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    &--bottom {
+      @include box(100%, auto);
+      @include make-flex($align: flex-start, $dir: column);
+      font-family: "AllianceNo1";
+      gap: 15px;
+
+      h2 {
+        background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+      }
+      p {
+        font-size: 17px;
+        font-family: inherit;
+      }
+    }
+  }
 }
 
 @keyframes marquee {
