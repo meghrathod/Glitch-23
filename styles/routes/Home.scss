@@ -62,7 +62,7 @@
       }
 
       @include respondAt(640px) {
-        font-size: 55px;
+        font-size: 50px;
       }
 
       span {
@@ -93,7 +93,7 @@
     &--dateBox {
       font-family: "AllianceNo1";
       border: 1.5px solid rgba(255, 255, 255, 0.53);
-      border-radius: 15px;
+      border-radius: 10px;
       font-weight: 900;
       font-size: 27px;
       height: 60px;
@@ -103,8 +103,17 @@
       @include respondAt(780px) {
         height: 50px;
       }
-      @include respondAt(642px) {
-        display: none;
+      @include respondAt(640px){
+        min-width: unset;
+        padding: 10px 13px;
+        font-size: 20px;
+      }
+      @include respondAt(490px) {
+        font-size: 20px;
+        width: fit-content;
+        flex-grow: 1;
+        padding: 6px;
+        font-size: 17px;
       }
     }
 
@@ -115,7 +124,7 @@
       column-gap: 30px;
       row-gap: 20px;
       @include respondAt(640px) {
-        gap: 20px;
+        gap: 14px;
       }
     }
 
@@ -137,6 +146,13 @@
       }
       @include respondAt(780px) {
         flex-direction: column;
+      }
+
+      a {
+        @include respondAt(430px) {
+          flex-grow: 1;
+          width: 100%;
+        }
       }
     }
 
@@ -592,6 +608,7 @@
       row-gap: 45px;
     }
   }
+
   &__prizesBox {
     @include box(375px, auto);
     @include make-flex();
@@ -619,6 +636,110 @@
       p {
         font-size: 17px;
         font-family: inherit;
+      }
+    }
+  }
+
+  &__FAQContainer {
+    @include box();
+    max-width: 1400px;
+    @include make-flex($dir: row, $align: flex-start, $just: space-between);
+
+    @include respondAt(1400px) {
+      max-width: unset;
+    }
+
+    @include respondAt(916px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  &__FAQ {
+    @include box(100%, auto);
+    @include make-flex();
+    margin: 65px 0;
+    min-height: 440px;
+
+    @include respondAt(1450px) {
+      padding: 0 15px;
+    }
+    &--left {
+      @include box(50%, 100%);
+      @include make-flex($just: flex-start, $align: flex-start);
+      h1 {
+        font-family: "AllianceNo1";
+        font-size: 50px;
+        font-weight: 800;
+        width: 56%;
+        background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+
+        @include respondAt(1450px) {
+          width: 70%;
+        }
+        @include respondAt(1250px) {
+          width: 100%;
+        }
+        @include respondAt(455px) {
+          font-size: 30px;
+        }
+      }
+      @include respondAt(916px) {
+        width: 100%;
+      }
+    }
+
+    &--right {
+      @include box(50%, 100%);
+      @include make-flex();
+      gap: 15px;
+
+      @include respondAt(916px) {
+        width: 100%;
+      }
+    }
+  }
+
+  .Footer {
+    @include box(100%, 130px);
+    background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
+    font-family: "AllianceNo1";
+    @include make-flex();
+
+    @include respondAt(470px) {
+      height: auto;
+    }
+
+    &__container {
+      @include box();
+      max-width: 1400px;
+      @include make-flex($dir: row, $just: space-between);
+
+      @include respondAt(1430px) {
+        max-width: unset;
+        padding: 0 15px;
+      }
+
+      @include respondAt(470px) {
+        padding: 15px;
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+    &__left {
+      font-size: 25px;
+      font-weight: 300;
+      color: black;
+    }
+    &__right {
+      height: 65%;
+      img {
+        height: 100%;
       }
     }
   }
