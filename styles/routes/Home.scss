@@ -137,11 +137,12 @@
       }
 
       p {
-        font-size: 17px;
+        font-size: 15px;
         font-weight: 200;
         font-family: "AllianceNo1";
         @include respondAt(640px) {
           text-align: center;
+					font-size: 12px;
         }
       }
       @include respondAt(780px) {

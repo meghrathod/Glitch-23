@@ -5,12 +5,29 @@ import Link from "next/link";
 import FaqDropdown from "../components/FaqDropdown/FaqDropdown";
 
 export default function Home() {
-  // useEffect(() => {
-  //   const cardsList = document.querySelectorAll(".HomeContainer__track--card");
-
-  // }, []);
-
-  const [questionIndex, setQuestionIndex] = useState(-1);
+	const [questionIndex, setQuestionIndex] = useState(-1);
+	const questions = [
+		{
+			question: "What is a hackathon?",
+			answer: "",
+		},
+		{
+			question: "What do the hackathon's tracks mean?",
+			answer: "",
+		},
+		{
+			question: "How do we register?",
+			answer: "",
+		},
+		{
+			question: "Are hackathons only for coding?",
+			answer: "",
+		},
+		{
+			question: "What is expected from teams who come to GLITCH?",
+			answer: "",
+		},
+	];
 
   return (
     <main className="HomeContainer">
@@ -44,9 +61,7 @@ export default function Home() {
               REGISTER FOR THE <span>HACK</span>
             </Link>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-              massa mi. Aliquam in hendrerit urna. Ut et massa mi. Aliquam in
-              hendrerit urna.
+              Register for the HACK - Introducing GLITCH! A collaboration between the  Google Developer Student Club (GDSC) and the Association of Computing Machinery (ACM) chapters of SNIoE, GLITCH is the flagship hackathon of SNIoE. Participate to seize the opportunity to learn, collaborate and build meaningful projects alongside mentors from various disciplines. 
             </p>
           </div>
         </div>
@@ -58,16 +73,10 @@ export default function Home() {
             <span>GLITCH</span> HACKATHON 2023
           </h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa
-            mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-            fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-            vitae mattis tellus. Nullam quis imperdiet augue.
+            GLITCH 2023 - This year's theme is Empowering through tech. We will have three tracks on this theme. Come join us for a weekend full of fun workshops, plenary lectures, social mixers, games and super cool merch! Open to everyone across the country, GLITCH is beginner friendly, and has no registration fee!
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa
-            mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-            fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
-            vitae mattis tellus. Nullam quis imperdiet augue.
+            Our hackathon is aimed at inviting individuals to come together and ideate end-to-end solutions for sustainable development, healthcare, security & privacy and productivity & utility. All participating teams will spend time developing applications with real-world applications. Students will also get a chance to network with industry experts and get guidance from mentors.
           </p>
 
           <div className="HomeContainer__about--buttons">
@@ -223,60 +232,17 @@ export default function Home() {
             <h1>Frequently Asked Questions</h1>
           </div>
           <div className="HomeContainer__FAQ--right">
-            <FaqDropdown
-              question="What is a hackathon?"
-              answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue."
-              isExpanded={questionIndex === 0}
-              onClick={() => {
-                if (questionIndex === 0) setQuestionIndex(-1);
-                else setQuestionIndex(0);
-              }}
-            />
-            <FaqDropdown
-              question="What is a hackathon?"
-              answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue."
-              isExpanded={questionIndex === 1}
-              onClick={() => {
-                if (questionIndex === 1) setQuestionIndex(-1);
-                else setQuestionIndex(1);
-              }}
-            />
-            <FaqDropdown
-              question="What is a hackathon?"
-              answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue."
-              isExpanded={questionIndex === 2}
-              onClick={() => {
-                if (questionIndex === 2) setQuestionIndex(-1);
-                else setQuestionIndex(2);
-              }}
-            />
-            <FaqDropdown
-              question="What is a hackathon?"
-              answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue."
-              isExpanded={questionIndex === 3}
-              onClick={() => {
-                if (questionIndex === 3) setQuestionIndex(-1);
-                else setQuestionIndex(3);
-              }}
-            />
-            <FaqDropdown
-              question="What is a hackathon?"
-              answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue."
-              isExpanded={questionIndex === 4}
-              onClick={() => {
-                if (questionIndex === 4) setQuestionIndex(-1);
-                else setQuestionIndex(4);
-              }}
-            />
-            <FaqDropdown
-              question="What is a hackathon?"
-              answer="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue."
-              isExpanded={questionIndex === 5}
-              onClick={() => {
-                if (questionIndex === 5) setQuestionIndex(-1);
-                else setQuestionIndex(5);
-              }}
-            />
+						{questions.map((question, index) => (
+							<FaqDropdown
+								question={question.question}
+								answer={question.answer}
+								isExpanded={questionIndex === index}
+								onClick={() => {
+									if (questionIndex === index) setQuestionIndex(-1);
+									else setQuestionIndex(index);
+								}}
+							/>
+						))}
           </div>
         </div>
       </section>
