@@ -9,30 +9,61 @@ export default function Home() {
 	const questions = [
 		{
 			question: "What is a hackathon?",
-			answer: "",
+			answer: `A hackathon is an event where groups of people, typically developers, designers, and
+				other tech enthusiasts, come together to collaborate on a software or hardware project. The
+				event usually takes place over a period of several days, and participants work intensively to
+				create a functional prototype of their project within the allotted time.`,
 		},
 		{
 			question: "What do the hackathon's tracks mean?",
-			answer: "",
+			answer: `GLITCH has four tracks which are themes that you have freedom to choose between.
+				Read through their descriptions and see what suits your team best. Choose wisely!`,
 		},
 		{
 			question: "How do we register?",
-			answer: "",
+			answer: `You can register through the Devfolio link provided on this website!`,
 		},
 		{
 			question: "Are hackathons only for coding?",
-			answer: "",
+			answer: `Hackathons aren't just for coding! Coming up with innovative solutions and being able to
+				present your idea well is as important as coding your application/project`,
 		},
 		{
 			question: "What is expected from teams who come to GLITCH?",
-			answer: "",
+			answer: `Nothing except your best! Understand your chosen track well and set your aims high.
+				Show us what you can do in the 24 hour time limit. Blow us away!`,
 		},
 	];
 
+	const tracks = [
+		{
+			title: "Productivity & Utility",
+			description: `Develop innovative solutions that can make people's lives easier and more efficient. Some
+				examples of productivity and utility apps include meal planning+grocery delivery service, smart
+				parking system etc.`,
+		},
+		{
+			title: "Security & Privacy",
+			description: `security and privacy are critical issues in today's digital world, and there is a lot of room for
+				innovation in this area. Examples of things you could work on in this track include an encrypted
+				messaging app, a blockchain-based identity verification system etc`,
+		},
+		{
+			title: "Sustainable Development",
+			description: `Sustainable development is an increasingly important theme in today’s world. A couple project
+				ideas in this track could be a waste reduction platform, an energy efficiency monitor etc`,
+		},
+		{
+			title: "Open Ended Innovation",
+			description: `Let your thoughts run wild! Come up with anything you think will blow the judges and the rest of
+				the participants' minds away.`,
+		},
+	];
+	
   return (
     <main className="HomeContainer">
       <Header />
-      <section className="HomeContainer__hero">
+      <section className="HomeContainer__hero" id="home">
         <img
           className="HomeContainer__hero--heroImage"
           src="/Images/HeroSectionImage.png"
@@ -67,7 +98,7 @@ export default function Home() {
         </div>
       </section>
       <section className="HomeContainer__sponsorBar"></section>
-      <section className="HomeContainer__about">
+      <section className="HomeContainer__about" id="about">
         <div className="HomeContainer__about--left">
           <h1>
             <span>GLITCH</span> HACKATHON 2023
@@ -112,7 +143,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="HomeContainer__track">
+      <section className="HomeContainer__track" id="tracks">
         <img
           className="HomeContainer__track--bgImage"
           src="/Images/TracksSectionImage.png"
@@ -136,51 +167,15 @@ export default function Home() {
                   card.style.setProperty("--mouse-y", `${y}px`);
                 });
             }}
-          >
-            <div className="HomeContainer__track--card">
-              <div className="HomeContainer__track--cardContent">
-                <h1>Productivity & Utility</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                  massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
-                  sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                  Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
-                </p>
-              </div>
-            </div>
-            <div className="HomeContainer__track--card">
-              <div className="HomeContainer__track--cardContent">
-                <h1>Productivity & Utility</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                  massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
-                  sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                  Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
-                </p>
-              </div>
-            </div>
-            <div className="HomeContainer__track--card">
-              <div className="HomeContainer__track--cardContent">
-                <h1>Productivity & Utility</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                  massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
-                  sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                  Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
-                </p>
-              </div>
-            </div>
-            <div className="HomeContainer__track--card">
-              <div className="HomeContainer__track--cardContent">
-                <h1>Productivity & Utility</h1>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
-                  massa mi. Aliquam in hendrerit urna. Pellentesque sit amet
-                  sapien fringilla, mattis ligula consectetur, ultrices mauris.
-                  Maecenas vitae mattis tellus. Nullam quis imperdiet augue.
-                </p>
-              </div>
-            </div>
+					>
+						{tracks.map((track, index) => (
+							<div className="HomeContainer__track--card" key={index}>
+								<div className="HomeContainer__track--cardContent">
+									<h1>{track.title}</h1>
+									<p>{track.description}</p>
+								</div>
+							</div>
+						))}
           </div>
         </div>
       </section>
@@ -193,7 +188,7 @@ export default function Home() {
           Great Prizes - Great Prizes
         </span>
       </section>
-      <section className="HomeContainer__prizes">
+      {/* <section className="HomeContainer__prizes">
         <div className="HomeContainer__prizesBox">
           <div className="HomeContainer__prizesBox--top"></div>
           <div className="HomeContainer__prizesBox--bottom">
@@ -224,9 +219,9 @@ export default function Home() {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className="HomeContainer__FAQ">
+      <section className="HomeContainer__FAQ" id="faq">
         <div className="HomeContainer__FAQContainer">
           <div className="HomeContainer__FAQ--left">
             <h1>Frequently Asked Questions</h1>
@@ -234,6 +229,7 @@ export default function Home() {
           <div className="HomeContainer__FAQ--right">
 						{questions.map((question, index) => (
 							<FaqDropdown
+								key={index}
 								question={question.question}
 								answer={question.answer}
 								isExpanded={questionIndex === index}
