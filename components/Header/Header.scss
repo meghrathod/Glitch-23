@@ -157,10 +157,22 @@
     &--right {
       margin-left: 30px;
       @include make-flex($just: flex-end, $dir: row);
+			position: relative;
 
       @include respondAt(1195px) {
         display: none;
       }
+
+			p {
+				@include box(100%, 100%);
+				@include make-flex($align: center, $just: center);
+				background-color: rgba(0, 0, 0, 0.7);
+				border-radius: 20px;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 10;
+			}
     }
 
     &--left,
