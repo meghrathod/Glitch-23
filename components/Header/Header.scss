@@ -162,12 +162,10 @@
       @include respondAt(1195px) {
         display: none;
       }
-
-			p {
+			
+			a {
 				@include box(100%, 100%);
 				@include make-flex($align: center, $just: center);
-				background-color: rgba(0, 0, 0, 0.7);
-				border-radius: 20px;
 				position: absolute;
 				top: 0;
 				left: 0;
