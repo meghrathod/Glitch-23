@@ -63,13 +63,14 @@ function Header() {
           </li>
         </ul>
 				<ul className="HeaderWrapper__MenuList--right">
-					<p>COMING SOON!</p>
-          <div
-            className="apply-button"
-            data-hackathon-slug="YOUR-HACKATHON-SLUG"
-            data-button-theme="light"
-            style={{ height: "44px", minWidth: "312px", width: "100%" }}
-          ></div>
+					<Link href="#"></Link>
+					<div
+						className="apply-button"
+						data-hackathon-slug="YOUR-HACKATHON-SLUG"
+						data-button-theme="light"
+						style={{ height: "44px", minWidth: "312px", width: "100%" }}
+						href="#"
+					></div>
         </ul>
       </div>
       <div className="HeaderWrapper__Hamburger">

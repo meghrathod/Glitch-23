@@ -97,7 +97,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="HomeContainer__sponsorBar"></section>
+			<section className="HomeContainer__sponsorBar">
+				<img
+					src="/Images/ClubLogos.png"
+					alt=""
+				/>
+			</section>
       <section className="HomeContainer__about" id="about">
         <div className="HomeContainer__about--left">
           <h1>
