@@ -333,6 +333,19 @@
         @include respondAt(565px) {
           font-size: 17px;
         }
+
+        span{
+          background: linear-gradient(
+            90deg,
+            #6500be 0%,
+            #393c98 25%,
+            #1a475f 60%,
+            #00ffee38 75%,
+            #00ffee00 100%
+          );
+          font-weight: bold;
+          white-space: pre;
+        }
       }
 
       @include respondAt(1030px) {

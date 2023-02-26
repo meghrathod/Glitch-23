@@ -46,9 +46,9 @@ function Header() {
           <li className="HeaderWrapper__MenuList--item">
             <Link href="/#tracks">Tracks</Link>
           </li>
-          <li className="HeaderWrapper__MenuList--item">
+          {/* <li className="HeaderWrapper__MenuList--item">
             <Link href="/#sponsors">Sponsors</Link>
-          </li>
+          </li> */}
           {/* <li className="HeaderWrapper__MenuList--item">
             <Link href="/#prizes">Prizes</Link>
           </li>
@@ -63,7 +63,7 @@ function Header() {
           </li>
         </ul>
 				<ul className="HeaderWrapper__MenuList--right">
-					<Link href="#"></Link>
+					<Link href="#">Registration Coming Soon!</Link>
 					<div
 						className="apply-button"
 						data-hackathon-slug="YOUR-HACKATHON-SLUG"
