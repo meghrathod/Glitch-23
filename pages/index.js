@@ -121,7 +121,7 @@ export default function Home() {
                     <p>
                         GLITCH 2023 - This year's theme is{" "}
                         <span> Empowering through tech. </span> We will have
-                        three tracks on this theme. Come join us for a weekend
+                        three tracks on this theme. Come join us for a couple of days
                         full of fun workshops, plenary lectures, social mixers,
                         games and super cool merch! Open to everyone across the
                         country, GLITCH is <span> beginner friendly </span>, and
