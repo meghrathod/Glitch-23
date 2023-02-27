@@ -86,7 +86,9 @@ export default function Home() {
                         <h1>
                             <span>INNOVATION</span>
                         </h1>
-                        <h1>MEET</h1>
+                        <h1>
+                            <em>COLLIDE!</em>
+                        </h1>
                     </div>
                     <div className="HomeContainer__hero--footer">
                         <Link
@@ -121,11 +123,12 @@ export default function Home() {
                     <p>
                         GLITCH 2023 - This year's theme is{" "}
                         <span> Empowering through tech. </span> We will have
-                        three tracks on this theme. Come join us for a couple of days
-                        full of fun workshops, plenary lectures, social mixers,
-                        games and super cool merch! Open to everyone across the
-                        country, GLITCH is <span> beginner friendly </span>, and
-                        is <span> free to register! </span>
+                        three tracks on this theme. Come join us for a couple of
+                        days full of fun workshops, plenary lectures, social
+                        mixers, games and super cool merch! Open to everyone
+                        across the country, GLITCH is{" "}
+                        <span> beginner friendly </span>, and is{" "}
+                        <span> free to register! </span>
                     </p>
                     <p>
                         Our hackathon is aimed at inviting individuals to come
