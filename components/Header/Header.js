@@ -63,7 +63,7 @@ function Header() {
           </li>
         </ul>
 				<ul className="HeaderWrapper__MenuList--right">
-					<Link href="#">Registration Coming Soon!</Link>
+					<Link href="#">Registrations Starting Soon!</Link>
 					<div
 						className="apply-button"
 						data-hackathon-slug="YOUR-HACKATHON-SLUG"
