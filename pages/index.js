@@ -348,10 +348,10 @@ export default function Home() {
             </h1>
           </div>
           <div className="HomeContainer__AskContainer--bottom">
-            <p>
+            {/* <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
               massa mi. Aliquam in hendrerit urna. Pellentesque sit
-            </p>
+            </p> */}
             <Link
               href="https://www.instagram.com/glitch.snioe/"
               target="_blank"
