@@ -284,6 +284,14 @@ export default function Home() {
           <img src="/Images/Sponsors/Devfolio.png" alt="" />
         </Link>
         <Link
+          href="https://replit.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="HomeContainer__DevfolioSponsor--logo"
+        >
+          <img src="/Images/Sponsors/Replit.png" alt="" />
+        </Link>
+        <Link
           href="https://polygon.technology/"
           rel="noopener noreferrer"
           target="_blank"
@@ -306,14 +314,6 @@ export default function Home() {
           className="HomeContainer__DevfolioSponsor--logo"
         >
           <img src="/Images/Sponsors/Filecoin.png" alt="" />
-        </Link>
-        <Link
-          href="https://replit.com/"
-          rel="noopener noreferrer"
-          target="_blank"
-          className="HomeContainer__DevfolioSponsor--logo"
-        >
-          <img src="/Images/Sponsors/Replit.png" alt="" />
         </Link>
       </section>
 
