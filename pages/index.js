@@ -110,7 +110,17 @@ export default function Home() {
         </div>
       </section>
       <section className="HomeContainer__sponsorBar">
-        <img src="/Images/ClubLogos-2.png" alt="" />
+        <span className="HomeContainer__sponsorBar--logo">
+          <img src="/Images/Club/1.png" alt="" />
+        </span>
+
+        <span className="HomeContainer__sponsorBar--logo">
+          <img src="/Images/Club/2.png" alt="" />
+        </span>
+
+        <span className="HomeContainer__sponsorBar--logo">
+          <img src="/Images/Club/3.png" alt="" />
+        </span>
       </section>
       <section className="HomeContainer__about" id="about">
         <div className="HomeContainer__about--left">
@@ -257,6 +267,55 @@ export default function Home() {
           </div>
         </div>
       </section> */}
+
+      <section
+        className="HomeContainer__DevfolioSponsor"
+        style={{
+          marginTop: "5rem",
+        }}
+      >
+        <h2>Sponsored by...</h2>
+        <Link
+          href="https://devfolio.co/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="HomeContainer__DevfolioSponsor--logo"
+        >
+          <img src="/Images/Sponsors/Devfolio.png" alt="" />
+        </Link>
+        <Link
+          href="https://polygon.technology/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="HomeContainer__DevfolioSponsor--logo"
+        >
+          <img src="/Images/Sponsors/Polygon.png" alt="" />
+        </Link>
+        <Link
+          href="https://solana.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="HomeContainer__DevfolioSponsor--logo"
+        >
+          <img src="/Images/Sponsors/Solana.png" alt="" />
+        </Link>
+        <Link
+          href="https://filecoin.io/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="HomeContainer__DevfolioSponsor--logo"
+        >
+          <img src="/Images/Sponsors/Filecoin.png" alt="" />
+        </Link>
+        <Link
+          href="https://replit.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="HomeContainer__DevfolioSponsor--logo"
+        >
+          <img src="/Images/Sponsors/Replit.png" alt="" />
+        </Link>
+      </section>
 
       <section className="HomeContainer__FAQ" id="faq">
         <div className="HomeContainer__FAQContainer">

@@ -32,7 +32,7 @@
   background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(18px);
   border: 1px solid #4a4a4a;
-  border-radius: 30px;
+  border-radius: 23px;
 
   #NavBarInput,
   .hamButton {
@@ -88,11 +88,14 @@
     }
 
     .devfolio-button-iframe {
-      position: relative;
-      background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
-      border: 1px solid #000000;
-      box-shadow: 6px 4px 0px #ffffff;
-      border-radius: 31px;
+      @include respondAt(916px) {
+        width: 248px !important;
+      }
+      //   position: relative;
+      //   background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
+      //   border: 1px solid #000000;
+      //   box-shadow: 6px 4px 0px #ffffff;
+      //   border-radius: 31px;
     }
   }
 
@@ -157,20 +160,22 @@
     &--right {
       margin-left: 30px;
       @include make-flex($just: flex-end, $dir: row);
-			position: relative;
+      position: relative;
 
-      @include respondAt(1195px) {
-        display: none;
+      @include respondAt(916px) {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
       }
-			
-			a {
-				@include box(100%, 100%);
-				@include make-flex($align: center, $just: center);
-				position: absolute;
-				top: 0;
-				left: 0;
-				z-index: 10;
-			}
+
+      a {
+        @include box(100%, 100%);
+        @include make-flex($align: center, $just: center);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
     }
 
     &--left,
