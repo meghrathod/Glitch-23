@@ -111,15 +111,15 @@ export default function Home() {
       </section>
       <section className="HomeContainer__sponsorBar">
         <span className="HomeContainer__sponsorBar--logo">
-          <img src="/Images/Club/1.png" alt="" />
+          <img src="/Images/Club/1_edit.png" alt="" />
         </span>
 
         <span className="HomeContainer__sponsorBar--logo">
-          <img src="/Images/Club/2.png" alt="" />
+          <img src="/Images/Club/2_edit.png" alt="" />
         </span>
 
         <span className="HomeContainer__sponsorBar--logo">
-          <img src="/Images/Club/3.png" alt="" />
+          <img src="/Images/Club/3_edit.png" alt="" />
         </span>
       </section>
       <section className="HomeContainer__about" id="about">
@@ -284,6 +284,14 @@ export default function Home() {
           <img src="/Images/Sponsors/Devfolio.png" alt="" />
         </Link>
         <Link
+          href="https://replit.com/"
+          rel="noopener noreferrer"
+          target="_blank"
+          className="HomeContainer__DevfolioSponsor--logo"
+        >
+          <img src="/Images/Sponsors/Replit.png" alt="" />
+        </Link>
+        <Link
           href="https://polygon.technology/"
           rel="noopener noreferrer"
           target="_blank"
@@ -306,14 +314,6 @@ export default function Home() {
           className="HomeContainer__DevfolioSponsor--logo"
         >
           <img src="/Images/Sponsors/Filecoin.png" alt="" />
-        </Link>
-        <Link
-          href="https://replit.com/"
-          rel="noopener noreferrer"
-          target="_blank"
-          className="HomeContainer__DevfolioSponsor--logo"
-        >
-          <img src="/Images/Sponsors/Replit.png" alt="" />
         </Link>
       </section>
 
