@@ -115,6 +115,9 @@
         padding: 6px;
         font-size: 17px;
       }
+      @include respondAt(390px) {
+        order: 1;
+      }
     }
 
     &--header {
@@ -141,8 +144,8 @@
         font-weight: 200;
         font-family: "AllianceNo1";
         @include respondAt(640px) {
-          text-align: center;
-          font-size: 12px;
+          text-align: justify;
+          font-size: 13px;
         }
       }
       @include respondAt(780px) {
@@ -182,7 +185,7 @@
         @include make-flex();
       }
       @include respondAt(640px) {
-        gap: 40px;
+        gap: 20px;
       }
     }
   }
