@@ -63,10 +63,10 @@ function Header() {
           </li>
         </ul>
 				<ul className="HeaderWrapper__MenuList--right">
-					<Link href="#">Registrations Starting Soon!</Link>
+					{/* <Link href="#">Registrations Starting Soon!</Link> */}
 					<div
 						className="apply-button"
-						data-hackathon-slug="YOUR-HACKATHON-SLUG"
+						data-hackathon-slug="glitch"
 						data-button-theme="light"
 						style={{ height: "44px", minWidth: "312px", width: "100%" }}
 						href="#"
