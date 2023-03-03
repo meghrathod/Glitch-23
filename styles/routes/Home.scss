@@ -794,6 +794,120 @@
     }
   }
 
+  &__AskQuestions {
+    background-image: url("/Images/FAQSection.svg");
+    @include box(100%, 350px);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include make-flex($dir: column, $align: center, $just: center);
+
+    @include respondAt(1450px) {
+      padding: 0 15px;
+    }
+  }
+
+  &__AskContainer {
+    @include box();
+    max-width: 1400px;
+    @include make-flex();
+    gap: 40px;
+
+    @include respondAt(1400px) {
+      max-width: unset;
+    }
+
+    @include respondAt(645px) {
+      gap: 20px;
+    }
+
+    &--top {
+      @include box(100%, auto);
+      @include make-flex();
+
+      h1 {
+        font-family: "AllianceNo1";
+        font-size: 40px;
+        font-weight: 500;
+        width: 64%;
+        padding-right: 130px;
+
+        @include respondAt(1042px) {
+          padding-right: 90px;
+        }
+
+        @include respondAt(940px) {
+          width: 84%;
+        }
+
+        @include respondAt(750px) {
+          width: 100%;
+          padding-right: 0;
+        }
+
+        @include respondAt(645px) {
+          font-size: 30px;
+          width: 80%;
+        }
+
+        @include respondAt(512px) {
+          width: 100%;
+        }
+      }
+    }
+
+    &--bottom {
+      @include box(100%, auto);
+      @include make-flex($dir: row, $just: flex-end);
+      padding-right: 10%;
+      gap: 20px;
+
+      @include respondAt(750px) {
+        padding-right: 0;
+        justify-content: center;
+      }
+
+      @include respondAt(645px) {
+        flex-direction: column;
+      }
+
+      p {
+        width: 28%;
+
+        @include respondAt(1042px) {
+          width: 35%;
+        }
+
+        @include respondAt(940px) {
+          width: 50%;
+        }
+        @include respondAt(645px) {
+          width: 80%;
+        }
+
+        @include respondAt(512px) {
+          width: 100%;
+        }
+      }
+
+      a {
+        height: 58px;
+        padding: 20px 50px;
+        background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
+        @include make-flex();
+        color: #000;
+        border-radius: 10px;
+        font-family: "AllianceNo1";
+        font-weight: 600;
+        font-size: 18px;
+
+        // @include respondAt(940px) {
+        //   height: 100%;
+        // }
+      }
+    }
+  }
+
   .Footer {
     @include box(100%, 130px);
     background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);

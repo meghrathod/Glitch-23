@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Header from "../components/Header/Header";
 import "../styles/routes/Home.scss";
 import Link from "next/link";
@@ -276,6 +276,31 @@ export default function Home() {
                 }}
               />
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="HomeContainer__AskQuestions">
+        <div className="HomeContainer__AskContainer">
+          <div className="HomeContainer__AskContainer--top">
+            <h1>
+              Got questions? We would love to answer to make your hackathon
+              smoother
+            </h1>
+          </div>
+          <div className="HomeContainer__AskContainer--bottom">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et
+              massa mi. Aliquam in hendrerit urna. Pellentesque sit
+            </p>
+            <Link
+              href="https://www.instagram.com/glitch.snioe/"
+              target="_blank"
+              title="Instagram"
+              rel="noopener noreferrer"
+            >
+              Instagram
+            </Link>
           </div>
         </div>
       </section>
