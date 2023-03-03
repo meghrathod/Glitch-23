@@ -111,15 +111,15 @@ export default function Home() {
       </section>
       <section className="HomeContainer__sponsorBar">
         <span className="HomeContainer__sponsorBar--logo">
-          <img src="/Images/Club/1.png" alt="" />
+          <img src="/Images/Club/1_edit.png" alt="" />
         </span>
 
         <span className="HomeContainer__sponsorBar--logo">
-          <img src="/Images/Club/2.png" alt="" />
+          <img src="/Images/Club/2_edit.png" alt="" />
         </span>
 
         <span className="HomeContainer__sponsorBar--logo">
-          <img src="/Images/Club/3.png" alt="" />
+          <img src="/Images/Club/3_edit.png" alt="" />
         </span>
       </section>
       <section className="HomeContainer__about" id="about">
