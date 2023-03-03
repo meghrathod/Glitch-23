@@ -103,7 +103,7 @@
       @include respondAt(780px) {
         height: 50px;
       }
-      @include respondAt(640px){
+      @include respondAt(640px) {
         min-width: unset;
         padding: 10px 13px;
         font-size: 20px;
@@ -142,7 +142,7 @@
         font-family: "AllianceNo1";
         @include respondAt(640px) {
           text-align: center;
-					font-size: 12px;
+          font-size: 12px;
         }
       }
       @include respondAt(780px) {
@@ -158,7 +158,7 @@
     }
 
     &--left {
-      @include box(55%, auto);
+      @include box(64%, auto);
       @include make-flex($dir: column, $just: flex-start);
       gap: 15px;
       margin-top: 120px;
@@ -262,23 +262,23 @@
 
   &__sponsorBar {
     @include box($height: 175px);
-		@include make-flex($dir: row, $just: center, $align: center);
-		
+    @include make-flex($dir: row, $just: center, $align: center);
+
     background-color: #191919;
     border-top: 0.5px solid rgba(255, 255, 255, 0.2);
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(14px);
-		
-		@include respondAt(800px) {
-			height: fit-content;
-			padding: 30px 0;
-		}
-		
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-		}
+
+    @include respondAt(800px) {
+      height: fit-content;
+      padding: 30px 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 
   &__about {
@@ -334,7 +334,7 @@
           font-size: 17px;
         }
 
-        span{
+        span {
           background: linear-gradient(
             90deg,
             #6500be 0%,
@@ -610,20 +610,83 @@
 
       @include respondAt(895px) {
         font-size: 42px;
-        background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        text-fill-color: transparent;
+        // background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
+        // -webkit-background-clip: text;
+        // -webkit-text-fill-color: transparent;
+        // background-clip: text;
+        // text-fill-color: transparent;
       }
     }
   }
 
   &__prizes {
-    @include make-flex($dir: row, $just: space-evenly);
-    @include box();
+    @include make-flex($dir: row, $just: flex-end);
+    @include box($height: 210px);
     max-width: 1400px;
     gap: 15px;
+    position: relative;
+
+    &--rightMobile {
+      display: none;
+
+      @include respondAt(670px) {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0 15px;
+      }
+
+      span {
+        @include respondAt(670px) {
+          font-size: 60px;
+        }
+      }
+    }
+
+    &--right {
+      @include respondAt(670px) {
+        display: none;
+      }
+    }
+
+    &--right,
+    &--rightMobile {
+      font-size: 55px;
+      font-weight: 600;
+      background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+
+      @include respondAt(916px) {
+        font-size: 45px;
+      }
+
+      @include respondAt(670px) {
+        font-size: 35px;
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    img {
+      transform: rotate(22.23deg);
+      height: 140%;
+      position: absolute;
+      left: 0;
+      top: -60px;
+      @include respondAt(916px) {
+        height: 150%;
+      }
+      @include respondAt(670px) {
+        display: none;
+      }
+    }
+
+    @include respondAt(916px) {
+      height: 120px;
+    }
 
     @include respondAt(1400px) {
       padding: 0 15px;

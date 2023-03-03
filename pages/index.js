@@ -204,15 +204,27 @@ export default function Home() {
           </div>
         </div>
       </section>
-      {/* <section className="HomeContainer__horizontalScroller">
-              <span>
-                  Great Prizes - Great Prizes - Great Prizes - Great Prizes -
-                  Great Prizes - Great Prizes - Great Prizes - Great Prizes -
-                  Great Prizes - Great Prizes - Great Prizes - Great Prizes -
-                  Great Prizes - Great Prizes - Great Prizes - Great Prizes -
-                  Great Prizes - Great Prizes - Great Prizes - Great Prizes
-              </span>
-          </section> */}
+      <section className="HomeContainer__horizontalScroller">
+        <span>
+          Great Prizes - Great Prizes - Great Prizes - Great Prizes - Great
+          Prizes - Great Prizes - Great Prizes - Great Prizes - Great Prizes -
+          Great Prizes - Great Prizes - Great Prizes - Great Prizes - Great
+          Prizes - Great Prizes - Great Prizes - Great Prizes - Great Prizes -
+          Great Prizes - Great Prizes - Great Prizes - Great Prizes - Great
+          Prizes - Great Prizes - Great Prizes - Great Prizes - Great Prizes -
+          Great Prizes - Great Prizes - Great Prizes - Great Prizes - Great
+          Prizes - Great Prizes - Great Prizes - Great Prizes - Great Prizes -
+          Great Prizes - Great Prizes - Great Prizes - Great Prizes
+        </span>
+      </section>
+      <section className="HomeContainer__prizes">
+        <img src="/Images/prizeBox.svg" alt="prizeBox" />
+        <p className="HomeContainer__prizes--right">Prices worth over 2 Lakh</p>
+        <p className="HomeContainer__prizes--rightMobile">
+          Prices worth over <br />
+          <span> 2 Lakh</span>
+        </p>
+      </section>
       {/* <section className="HomeContainer__prizes">
         <div className="HomeContainer__prizesBox">
           <div className="HomeContainer__prizesBox--top"></div>
