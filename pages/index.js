@@ -274,7 +274,7 @@ export default function Home() {
           marginTop: "5rem",
         }}
       >
-        <h2>Sponsored by...</h2>
+        <h2>SPONSORS</h2>
         <Link
           href="https://devfolio.co/"
           rel="noopener noreferrer"
