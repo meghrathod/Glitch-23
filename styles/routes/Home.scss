@@ -506,10 +506,12 @@
       margin-bottom: 20px;
       flex-wrap: wrap;
 
+      @include respondAt(945px) {
+        margin: 0;
+      }
+
       @include respondAt(400px) {
         font-size: 8vw;
-        width: 100%;
-        margin: 0;
       }
       span {
         font-family: inherit;
@@ -541,6 +543,8 @@
         width: 100%;
         margin: 0;
         padding: 0 15px;
+        align-items: center;
+        gap: 15px;
       }
     }
 
@@ -613,7 +617,7 @@
       }
 
       @include respondAt(400px) {
-        min-height: 300px;
+        min-height: 245px;
       }
     }
 
