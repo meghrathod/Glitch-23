@@ -91,7 +91,7 @@ export default function Home() {
           <div className="HomeContainer__hero--footer">
             <Link
               className="HomeContainer--blueButton"
-              href="https://glitch.devfolio.co/"
+              href="https://unstop.com/hackathons/glitch-shiv-nadar-university-snu-greater-noida-633527"
               target="_blank"
               referrerPolicy="no-referrer"
               rel="noopener noreferrer"

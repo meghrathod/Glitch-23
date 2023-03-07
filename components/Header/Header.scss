@@ -66,7 +66,10 @@
   &__Menu {
     position: relative;
     @include box();
-    @include make-flex($dir: row, $just: space-between);
+    // @include make-flex($dir: row, $just: space-between);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
     @include respondAt(915px) {
       top: 0;
       right: 0;
@@ -75,7 +78,9 @@
       height: 100vh;
       position: fixed;
       max-width: 290px;
-      flex-direction: column;
+      // flex-direction: column;
+      grid-template-columns: unset;
+      grid-template-rows: min-content 50px 50px;
       padding: 70px 14px 0 24px;
       background-color: #121212;
       justify-content: flex-start;
@@ -85,17 +90,6 @@
       &--open {
         transform: translateX(0%);
       }
-    }
-
-    .devfolio-button-iframe {
-      @include respondAt(916px) {
-        width: 248px !important;
-      }
-      //   position: relative;
-      //   background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
-      //   border: 1px solid #000000;
-      //   box-shadow: 6px 4px 0px #ffffff;
-      //   border-radius: 31px;
     }
   }
 
@@ -158,7 +152,7 @@
     }
 
     &--right {
-      margin-left: 30px;
+      @include box(auto, 100%);
       @include make-flex($just: flex-end, $dir: row);
       position: relative;
 
@@ -169,12 +163,27 @@
       }
 
       a {
-        @include box(100%, 100%);
+        @include box(300px, 50%);
         @include make-flex($align: center, $just: center);
-        position: absolute;
-        top: 0;
-        left: 0;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
         z-index: 10;
+        position: relative;
+        background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
+        border: 1px solid #474747;
+        box-shadow: 4px 4px 0px #ffffff;
+        border-radius: 31px;
+        color: black;
+        font-family: "AllianceNo1";
+        font-weight: 700;
+        font-size: 21px;
+
+        @include respondAt(916px) {
+          width: 248px;
+          height: 40px;
+          font-size: 19px;
+        }
       }
     }
 
@@ -187,7 +196,7 @@
     }
 
     &--left {
-      flex-grow: 1;
+      // flex-grow: 1;
       @include make-flex($just: flex-start, $dir: row);
       @include respondAt(915px) {
         display: none;
@@ -195,6 +204,7 @@
     }
 
     &--center {
+      justify-content: space-evenly;
       @include respondAt(915px) {
         width: 100%;
         flex-direction: column;

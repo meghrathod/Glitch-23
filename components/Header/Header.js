@@ -62,15 +62,10 @@ function Header() {
             <Link href="/#faq">FAQs</Link>
           </li>
         </ul>
-				<ul className="HeaderWrapper__MenuList--right">
-					{/* <Link href="#">Registrations Starting Soon!</Link> */}
-					<div
-						className="apply-button"
-						data-hackathon-slug="glitch"
-						data-button-theme="light"
-						style={{ height: "44px", minWidth: "312px", width: "100%" }}
-						href="#"
-					></div>
+        <ul className="HeaderWrapper__MenuList--right">
+          <Link href="https://unstop.com/hackathons/glitch-shiv-nadar-university-snu-greater-noida-633527">
+            Register now!
+          </Link>
         </ul>
       </div>
       <div className="HeaderWrapper__Hamburger">
