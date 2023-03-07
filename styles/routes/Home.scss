@@ -269,6 +269,8 @@
     padding: 30px;
     @include make-flex($dir: row, $just: center, $align: center);
 
+    
+
     background-color: #191919;
     border-top: 0.5px solid rgba(255, 255, 255, 0.2);
     border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
@@ -282,6 +284,23 @@
 
     flex-wrap: wrap;
     gap: 30px;
+
+    &--title{
+      width: 100%;
+      h2{
+        font-family: "AllianceNo1";
+        font-size: 34px;
+        background: linear-gradient(90deg, #0afffd 0%, #7fe786 90%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-background-clip: text;
+        -moz-text-fill-color: transparent;
+        text-align: center;
+      }
+
+    }
+
 
     &--logo {
       @include box(auto, 120px);
@@ -297,15 +316,20 @@
       }
 
       @include respondAt(1185px) {
-        &:nth-child(2) {
-          order: -1;
-          width: 100%;
-        }
         height: 85px;
         flex-grow: 1;
 
-        &:not(:nth-child(2)) {
-          padding: 18px;
+        &:not(:nth-child(3)) {
+          padding: 0px;
+        }
+        
+
+        &:nth-child(3) {
+          padding: 6px;
+        }
+
+        &:nth-child(6) {
+          padding: 15px;
         }
       }
 
@@ -965,15 +989,20 @@
     backdrop-filter: blur(14px);
     flex-wrap: wrap;
     gap: 30px;
-    h2 {
-      background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      color: transparent;
-      font-size: 45px;
+    
+    &--title{
       width: 100%;
+      h2 {
+        font-family: "AllianceNo1";
+        font-size: 34px;
+        background: linear-gradient(90deg, #0afffd 0%, #7fe786 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-align: center;
+      }
     }
+    
     &--logo {
       @include box(330px, 95px);
       padding: 24px;
