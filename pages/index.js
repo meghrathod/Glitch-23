@@ -358,6 +358,16 @@ export default function Home() {
               >
                   <img src="/Images/Sponsors/Filecoin.png" alt="" />
               </Link>
+                <Link
+
+                    href="https://www.wolfram.com/language/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    className="HomeContainer__DevfolioSponsor--logo"
+                >
+                    <img src="/Images/Sponsors/Wolfram.png" alt="" />
+                </Link>
+
           </section>
 
           <section className="HomeContainer__FAQ" id="faq">
